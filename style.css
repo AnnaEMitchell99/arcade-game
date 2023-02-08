@@ -1,0 +1,19 @@
+#page-header{
+    display:flex;
+    justify-content:center;
+    color:indigo;
+    border: 5px black solid;
+}
+
+#game-board{
+    display:grid;
+    grid-template-rows: 225px 225px 225px;
+    grid-template-columns: 225px 225px 225px;
+    justify-content: center;
+}
+
+.tile{
+    border: 2px black solid;
+    margin: 5px;
+    font-size: 5em;
+}
