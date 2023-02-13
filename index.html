@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href = "style.css">
-    <script type="text/javascript" defer src="app.js"></script>
+    <title>Tic Tac Test</title>
+    <link rel="stylesheet" href = "test-style.css">
+    <script type="text/javascript" defer src="test-app.js"></script>
 </head>
 <body>
-    <h1 id="page-header">Tic Tac Toe</h1>
-
-    <div id="game">
-
+    <h2 id="page-header">Tic Tac Toe</h2>
+    <div class="player-names"> 
+        <h4 id="player-one">Player X: 
+            <input> </input>
+        </h4>
+        <h4 id="player-two">Player O: 
+            <input> </input>
+        </h4>
     </div>
-    <section id="game-board">
-        <div class="tile"> </div>
-        <div class="tile"> </div>
-        <div class="tile"> </div>
-        <div class="tile"> </div>
-        <div class="tile"> </div>
-        <div class="tile"> </div>
-        <div class="tile"> </div>
-        <div class="tile"> </div>
-        <div class="tile"> </div>
-    </section>
+    <div id="game"></div>
+    <div id="game-board">
+        <button id="button-one" data-index="1" class="tile"> </button>
+        <button id="button-two" data-index="2" class="tile"> </button>
+        <button id="button-three" data-index="3" class="tile"> </button>
+        <button data-index="4" class="tile"> </button>
+        <button data-index="5" class="tile"> </button>
+        <button data-index="6" class="tile"> </button>
+        <button data-index="7" class="tile"> </button>
+        <button data-index="8" class="tile"> </button>
+        <button data-index="9" class="tile"> </button>
+    </div>
+    <div>
+        <div id="game-over-text">  </div>
+        <button id="reset-button"> Reset </button>
+    </div>
+
+
 </body>
-</html>

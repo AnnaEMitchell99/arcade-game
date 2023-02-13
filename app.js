@@ -1,39 +1,54 @@
+let tile = document.getElementById("game-board");
 
-let gameBoard = document.getElementById("game-board");
+let gameBoard = Array(tile.length)
+gameBoard.fill(undefined)
 
-let gameTiles = document.getElementsByClassName("tile");
+let playerOne = document.getElementById("player-one");
+let playerTwo = document.getElementById("player-two");
+let playerX = "X";
+let playerO = "O";
+let currentPlayer = playerX;
 
-// let gameBoard = [
-//     [undefined, undefined, undefined],
-//     [undefined, undefined, undefined],
-//     [undefined, undefined, undefined]
-// ]
 
-// for (let i = 0; i < gameBoard.length; i++){
-//     let currentElement = gameBoard[i]
-//     console.log(currentElement)
-//     for (let nestedI = 0; nestedI < currentElement.length; nestedI++){
-//         let nestedElement = currentElement[nestedI];
-//         console.log(nestedElement)
-//     }
-// }
+function tileSelect(event){
+    let gameSquare = event.target;
+    let gameSquareNumber = gameSquare.dataset.index;
+    if (gameSquare.innerText != ""){
 
-// let gameEle = document.getElementById("game")
+    }
+    if (currentPlayer === playerX){
+        gameSquare.textContent = playerX;
+        gameBoard[gameSquareNumber - 1] = playerX;
+        currentPlayer = playerO
+    } else {
+        gameSquare.textContent = playerO;
+        gameBoard[gameSquareNumber - 1] = playerO;
+        currentPlayer = playerX
+    }
+}
 
-// function boardCellCallback(){
-//     console.log(event)
-//     console.log(event.target)
-// }
+tile.addEventListener("click", tileSelect)
 
-// function buildGameBoard(){
-//     let gameEle = document.getElementById("game")
-//     for (let indexPosition = 0; indexPosition < gameBoard.length; indexPosition++){
-//         let newBoardCell = document.createElement("p");
-//         newBoardCell.className.add = "cell";
-//         newBoardCell.classList.add(indexPosition);
-//         newBoardCell.addEventListener("click", boardCellCallback)
-//         gameEle.appendChild(newBoardCell);
-//     }
-// }
+function winGame(){
+    let buttonOne = document.getElementById("button-one")
+    let buttonTwo = document.getElementById("button-two")
+    let buttonThree = document.getElementById("button-three")
+    if (buttonOne.textContent == buttonTwo.textContent){
+        
+    }
+}
 
-// window.addEventListener("DOMContentLoaded", buildGameBoard)
+
+let gameFinishers = [
+    gameBoard[1, 2, 3]
+]
+
+if (!gameBoard.includes(undefined)){
+    let message = document.createElement("p")
+    message.textContent = "Game Over"
+    document.getElementById("game-over-text").appendChild(message)
+    } else if(gameBoard.includes(undefined)){
+        let messageTwo = document.createElement("p")
+        messageTwo.textContent = "Game Continues"
+    document.getElementById("game-over-text").appendChild(messageTwo)
+}
