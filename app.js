@@ -45,7 +45,7 @@ let gameFinishers = [
 
 if (!gameBoard.includes(undefined)){
     let message = document.createElement("p")
-    message.textContent = "Game Over"
+    message.textContent= "Game Over"
     document.getElementById("game-over-text").appendChild(message)
     } else if(gameBoard.includes(undefined)){
         let messageTwo = document.createElement("p")
