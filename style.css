@@ -2,6 +2,7 @@
     display:flex;
     justify-content:center;
     color:black;
+    /* border: 5px black solid; */
 }
 
 .player-names{
@@ -9,6 +10,7 @@
     justify-content:left;
     flex-direction:column;
     color:black;
+    /* border: 5px black solid; */
     margin-bottom: 20px;
 }
 
